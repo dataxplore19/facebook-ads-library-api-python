@@ -2,6 +2,11 @@
 
 Updates to the [Facebook Ads Library](https://apify.com/data_xplorer/facebook-ads-library?fpr=6vi1cs) Actor used by this repository. Click **Watch > Custom > Releases** at the top of the page to be notified of new ones.
 
+## Actor v1.6 (2026-11-25)
+
+- More reliable connection: when the connection fails in the searched country, the Actor switches to another region and keeps it for the rest of the run. Results are the same.
+- Short outages no longer end the run at once: the Actor waits a little and tries again before giving up, and stops cleanly if the connection stays down.
+
 ## Actor v1.5 (2026-11-22)
 
 - Search by Page name: type `Nike` or `Decathlon France` and get that Page's ads, with the usual filters. Used by `python fb_ads.py page Nike`.
